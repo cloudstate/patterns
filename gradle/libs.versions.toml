@@ -1,0 +1,7 @@
+[versions]
+jspecifyVersion = "1.0.0"
+assertjVersion = "3.27.7"
+
+[libraries]
+jspecify = { module =  "org.jspecify:jspecify", version.ref = "jspecifyVersion" }
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertjVersion" }
