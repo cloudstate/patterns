@@ -28,7 +28,9 @@ public final class EnterBarRules extends AbstractRules<EnterBarRules> {
 
 	@Override
 	protected Clause rules() {
-		return barIsOpen().and(allAreSober()).and(ofLegalAge().or(lateTeenWithAdultCompany()));
+		return barIsOpen()
+				.and(allAreSober())
+				.and(ofLegalAge().or(lateTeenWithAdultCompany()));
 	}
 
 	protected Clause barIsOpen() {
