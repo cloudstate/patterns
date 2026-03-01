@@ -2,7 +2,7 @@
 A demonstrator of different styles of coding patterns
 
 
-### Clause
+### Condition
 The Condition pattern demonstrates one approach to implementing complex boolean logic in a readable and maintainable way.
 
 #### Example domain
@@ -28,6 +28,7 @@ public record Bar(boolean open) { }
 > Note the lack of supporting methods in Customer. This will make the EnterBarRules class more bloated.
 
 
+How to create an instance of the EnterBarRules class
 ```java
 public class EnterBarRules extends AbstractRules<EnterBarRules> {
 
