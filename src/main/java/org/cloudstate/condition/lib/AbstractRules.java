@@ -1,16 +1,20 @@
-package org.cloudstate.clause.lib;
+package org.cloudstate.condition.lib;
+
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 import static java.util.Objects.isNull;
 
+@NullMarked
 public abstract class AbstractRules<R extends AbstractRules<R>> {
 
-	private Boolean cachedResult = null;
+	private @Nullable Boolean cachedResult = null;
 
-	protected abstract Clause rules();
+	protected abstract Condition conditions();
 
 	public final boolean evaluate() {
 		if (isNull(cachedResult)) {
-			cachedResult = rules().get();
+			cachedResult = conditions().get();
 		}
 
 		return cachedResult;
